@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-by-Side Image Links</title>
+    <style>
+        /* Center content both horizontally and vertically */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container for the two images */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* Space between images */
+        }
+
+        /* Styling for each image link */
+        .image-container a {
+            width: 45%; /* Adjust width as needed */
+            overflow: hidden;
+            display: block;
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+
+        /* Styling for images */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease; /* Smooth transition on hover */
+            display: block;
+        }
+
+        /* Hover effect */
+        .image-container a:hover img {
+            transform: scale(1.1); /* Slightly enlarge the image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <a href="CHOOSEGOD3.html">
+        <img src="youth.png" alt="Link to Page 4">
+    </a>
+    <a href="page6.html">
+        <img src="guns.png" alt="Link to Page 2">
+    </a>
+</div>
+<body style="background-color:white;"></body>
+
+</body>
+</html>

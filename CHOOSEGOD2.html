@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+
+  
+  
+  <title>Video Background</title>
+  <style>
+    /* Styles to make the video cover the entire background */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding-top: 20%;
+      font-size: 24px;
+    }
+    .title {
+       display:  block;
+       margin-left: auto; 
+       margin-right: auto;
+    }
+    
+
+
+<title>Click Glow Effect</title>
+<style>
+/* Full page styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Styling for the glow effect */
+.click-glow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: glow 0.5s ease-out;
+  opacity: 0.8;
+  transform: translate(-50%, -50%);
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    box-shadow: 0 0 30px 30px rgba(255, 255, 255, 0);
+  }
+}
+</style>
+
+<title>Cross Cursor</title>
+<style>
+/* Hide the default cursor */
+body {
+  cursor: none;
+}
+
+/* Style the custom cursor */
+.cross-cursor {
+  position: absolute;
+  width: 4px;
+  height: 24px;
+  background-color: white;
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.cross-cursor::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 24px;
+  height: 4px;
+  background-color: white;
+}
+</style>
+
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  </style>
+
+
+
+</head>
+
+
+
+<body>
+   
+  <a href="page2.html"><img src="title.png" alt="page2.html" class="center" style="width:1150px;height:auto;" ></a>
+  
+
+
+</a>
+
+  <!-- Background video -->
+  <video class="video-background" autoplay muted loop>
+    <source src="wronganswer2.MP4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  
+  <div class="cross-cursor" id="crossCursor"></div>
+
+
+
+<script>
+const cursor = document.getElementById('crossCursor');
+
+document.addEventListener('mousemove', (e) => {
+cursor.style.left = e.pageX + 'px';
+cursor.style.top = e.pageY + 'px';
+});
+</script>
+<script>
+// Function to create a glow effect at the cursor location
+document.addEventListener('click', function(event) {
+  // Create a new element for the glow
+  const glow = document.createElement('div');
+  glow.classList.add('click-glow');
+
+  // Position the glow at the cursor location
+  glow.style.left = `${event.pageX}px`;
+  glow.style.top = `${event.pageY}px`;
+
+  // Add the glow to the body
+  document.body.appendChild(glow);
+
+  // Remove the glow after the animation completes
+  glow.addEventListener('animationend', () => {
+    glow.remove();
+  });
+});
+</script>
+
+
+</body>
+</html>
+
+
